@@ -1,4 +1,5 @@
 #Classe Joueur
+
 '''
 class Coordonnees:
     def __init__(self, x, y):
@@ -45,9 +46,11 @@ class Recherche:
 
 class Unite:  
     list_Unite = []
+    
     def attaquer(self, cible):
-    #regarde la portée
-        if self.portee >= 2:
+        #regarde la portée
+        x1,y1,x2,y2 = self.coord, cible.coord
+        if self.portee >= ((x1-x2)**2+(y1-y2)**2)**(1/2): #Remplacer pour la distance
         
             cible.pv -= self.degats
         

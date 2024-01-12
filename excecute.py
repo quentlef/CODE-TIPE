@@ -88,6 +88,8 @@ def affiche(Map):
 
 #Initialisation des variables Villes , Joueur
 def CommencerPartie(Map): #à modif plus tard pour + 2 joueurs    
+    j1 = cl.Joueur("J1")
+    j2 = cl.Joueur("J2")
     Gaia = cl.Joueur("Gaia")
     Lille = cl.Ville("Lille",j1,(0,5)) 
     Map[0][5] = "VJ1 {}".format(Lille.nom) 
@@ -96,10 +98,10 @@ def CommencerPartie(Map): #à modif plus tard pour + 2 joueurs
     Map[9][6] = "VJ2 {}".format(Paris.nom)
     Lille.joueur = j1
     Paris.joueur = j2
-    EclaireurJ1 = cl.Unite.Archer(j1,"EclaireurJ1",(5,5))
-    VU.ChangeValeur(EclaireurJ1)
-    EclaireurJ2 = cl.Unite.Archer(j2,"EclaireurJ2",(5,5))
-    VU.ChangeValeur(EclaireurJ2)
+    EclaireurC1 = cl.Unite.Archer(j1,"EclaireurC1",(5,5))
+    #VU.ChangeValeur(EclaireurJ1)
+    EclaireurC2 = cl.Unite.Archer(j2,"EclaireurC2",(5,5))
+    #VU.ChangeValeur(EclaireurJ2)
     #choisir un build pour la ville 1:
     for ville in cl.Ville.list_villes:
         if ville.build == None:

@@ -14,7 +14,6 @@ def initMap(n):
         L.append(n*["Vide"])
     return L   
 Map = initMap(10) #grille 10*10
-
    
 Lille = cl.Ville("Lille",1,(0,4))
 Map[0][4] = "VJ1 {}".format(Lille.nom)
@@ -23,9 +22,10 @@ Map[9][5] = "VJ2 {}".format(Paris.nom)
 Lille.production = 10
 Paris.production = 10
 def updateMap():
+    Mapaffiche = Map.copy()
     for unite in cl.Unite.list_Unite:
         x,y = unite.coord
-        Map[x][y] = Map [x][y] + " " + unite.nom 
+        Mapaffiche[x][y] = Map[x][y] + " " + unite.nom 
         
 EclaireurJ1 = cl.Unite.Archer(1,"EclaireurJ1",Lille.coord)
 updateMap()
@@ -38,6 +38,12 @@ def CoupPossible():
         for direc in unite.directions:
             if ex.bouge(unite,direc) == "déplacement impossible":
                 unite.directions.remove(direc)
+        unite.attaquable = []
+        for uniteattaquable in cl.Unite.list_Unite:
+            if uniteattaquable != unite and unite.joueur != uniteattaquable.joueur:
+                if unite.attaquer(uniteattaquable) != ("La cible est hors de portée !") :
+                    unite.attaquable.append(uniteattaquable)
+                
                             
                 
                 
