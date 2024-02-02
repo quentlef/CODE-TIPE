@@ -72,7 +72,7 @@ class Unite:
         pv = 50
         #xp = 0
         #attaque = 1
-        valeur = 20
+        valeur = 3
 
         def __init__(self,joueur,nom,coord =(1,1)):
             # Attributs d'instance propres à chaque instance
@@ -91,7 +91,7 @@ class Unite:
         pv = 50
         #xp = 0
         #attaque = 1
-        valeur = 20
+        valeur = 2
         def __init__(self,joueur,nom,coord =(1,1)):
             # Attributs d'instance propres à chaque instance
             self.nom = nom     
@@ -109,7 +109,7 @@ class Unite:
         pv = 50
         #xp = 0
         #attaque = 1
-        valeur = 30
+        valeur = 3
         def __init__(self,joueur, nom,coord =(1,1)):
             # Attributs d'instance propres à chaque instance
             self.nom = nom     
