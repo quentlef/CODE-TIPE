@@ -15,9 +15,9 @@ Carrière = Occtroit +2 engrenage à la ville rattaché
 '''  
 '''
 Valeur des unités pour l'heuristique de l'ia de combat
-Eclaireur:20 points
-Guerrier:30points
-Archer:30points
+Eclaireur:2 points
+Guerrier:3 points
+Archer:3 points
 '''
 #VU = cl.ValeurUnite()
 Plaines = cl.Case("Plaines", [0,2,0,0] , "rien", "P", 1)
